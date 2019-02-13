@@ -1,0 +1,5 @@
+platformVersion=
+deviceName=
+platformName=Android
+apkPath=
+appWaitActivity=com.todoist.activity.WelcomeActivity

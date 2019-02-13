@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<div style="color:green">INFO: [02-13-2019 05:04:51 474] Thread: main :: Testing in Device: emulator-5554</div>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="15667" started-at="2019-02-13T09:04:51Z" finished-at="2019-02-13T09:05:07Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="15667" started-at="2019-02-13T09:04:51Z" finished-at="2019-02-13T09:05:07Z">
+      <class name="com.slate.assignment.TodoistCases">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="before" is-config="true" duration-ms="6" started-at="2019-02-13T17:04:51Z" finished-at="2019-02-13T17:04:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="beforeMethod" is-config="true" duration-ms="14869" started-at="2019-02-13T17:04:51Z" finished-at="2019-02-13T17:05:06Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<div style="color:green">INFO: [02-13-2019 05:04:51 474] Thread: main :: Testing in Device: emulator-5554</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="createProjectCase()[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="createProjectCase" duration-ms="6" started-at="2019-02-13T17:05:06Z" finished-at="2019-02-13T17:05:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectCase -->
+        <test-method status="PASS" signature="resetApp(java.lang.reflect.Method)[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="resetApp" is-config="true" duration-ms="781" started-at="2019-02-13T17:05:06Z" finished-at="2019-02-13T17:05:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.slate.assignment.TodoistCases.createProjectCase() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetApp -->
+      </class> <!-- com.slate.assignment.TodoistCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
