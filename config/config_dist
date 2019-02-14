@@ -3,3 +3,7 @@ deviceName=
 platformName=Android
 apkPath=
 appWaitActivity=com.todoist.activity.WelcomeActivity
+email=
+password=
+todoistApi=
+userAuth=

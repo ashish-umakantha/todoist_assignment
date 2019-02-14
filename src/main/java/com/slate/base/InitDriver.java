@@ -21,6 +21,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 public class InitDriver {
 	
 	private AppiumDriver<MobileElement> driver;
+	public Onboarding onboarding;
 	
 	/**
      * Getter method to get instance of driver
@@ -103,7 +104,7 @@ public class InitDriver {
         WaitHelperUtil.setImplicitWait(10, TimeUnit.SECONDS, driver);
         setDriver(driver);
        /** Initializing onboarding page */
-        new Onboarding(driver);
+        onboarding = new Onboarding(driver);
 	}
 	
 }

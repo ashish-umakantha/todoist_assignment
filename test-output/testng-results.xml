@@ -2,30 +2,80 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[<div style="color:green">INFO: [02-13-2019 05:04:51 474] Thread: main :: Testing in Device: emulator-5554</div>]]>
+      <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:11 916] Thread: main :: Testing in Device: emulator-5554</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:26 464] Generating random and unique project name</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:27 698] {
+	"id": 2205532193,
+	"name": "Test project 307674",
+	"order": 7,
+	"indent": 1,
+	"comment_count": 0
+}
+</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:27 702] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 307674","id":2205532193,"order":7}</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:27 702] Navigating to login screen</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:28 504] Entering credentials from config file</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:51 253] Verifying project name in manage project tab</div>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15667" started-at="2019-02-13T09:04:51Z" finished-at="2019-02-13T09:05:07Z">
+  <suite name="Default suite" duration-ms="47787" started-at="2019-02-14T08:18:11Z" finished-at="2019-02-14T08:18:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15667" started-at="2019-02-13T09:04:51Z" finished-at="2019-02-13T09:05:07Z">
+    <test name="Default test" duration-ms="47787" started-at="2019-02-14T08:18:11Z" finished-at="2019-02-14T08:18:59Z">
       <class name="com.slate.assignment.TodoistCases">
-        <test-method status="PASS" signature="before()[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="before" is-config="true" duration-ms="6" started-at="2019-02-13T17:04:51Z" finished-at="2019-02-13T17:04:51Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="before" is-config="true" duration-ms="6" started-at="2019-02-14T16:18:11Z" finished-at="2019-02-14T16:18:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="beforeMethod" is-config="true" duration-ms="14869" started-at="2019-02-13T17:04:51Z" finished-at="2019-02-13T17:05:06Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="beforeMethod" is-config="true" duration-ms="14538" started-at="2019-02-14T16:18:11Z" finished-at="2019-02-14T16:18:26Z">
           <reporter-output>
             <line>
-              <![CDATA[<div style="color:green">INFO: [02-13-2019 05:04:51 474] Thread: main :: Testing in Device: emulator-5554</div>]]>
+              <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:11 916] Thread: main :: Testing in Device: emulator-5554</div>]]>
             </line>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="createProjectCase()[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="createProjectCase" duration-ms="6" started-at="2019-02-13T17:05:06Z" finished-at="2019-02-13T17:05:06Z">
+        <test-method status="PASS" signature="createProjectCase()[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="createProjectCase" duration-ms="32520" started-at="2019-02-14T16:18:26Z" finished-at="2019-02-14T16:18:58Z">
           <reporter-output>
+            <line>
+              <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:26 464] Generating random and unique project name</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:27 698] {
+	"id": 2205532193,
+	"name": "Test project 307674",
+	"order": 7,
+	"indent": 1,
+	"comment_count": 0
+}
+</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:27 702] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 307674","id":2205532193,"order":7}</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:27 702] Navigating to login screen</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:28 504] Entering credentials from config file</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div style="color:green">INFO: [02-14-2019 04:18:51 253] Verifying project name in manage project tab</div>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- createProjectCase -->
-        <test-method status="PASS" signature="resetApp(java.lang.reflect.Method)[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="resetApp" is-config="true" duration-ms="781" started-at="2019-02-13T17:05:06Z" finished-at="2019-02-13T17:05:07Z">
+        <test-method status="PASS" signature="resetApp(java.lang.reflect.Method)[pri:0, instance:com.slate.assignment.TodoistCases@6e0e048a]" name="resetApp" is-config="true" duration-ms="720" started-at="2019-02-14T16:18:58Z" finished-at="2019-02-14T16:18:59Z">
           <params>
             <param index="0">
               <value>
