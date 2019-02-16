@@ -1,4 +1,4 @@
-# slate_assignment
+# Assignment
 Todoist Android Assignment
 
 Tools used: Appium with Java, Selenium, TestNG, Extent report for report, http client and Rest Assured for API.
