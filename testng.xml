@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Assignment Suite">
+	<listeners>
+		<listener
+			class-name="com.slate.listeners.ExtentReportListener"></listener>
+	</listeners>
+	<test  name="Android native app test on Android 7">
+		<classes>
+			<class name="com.slate.assignment.TodoistCases" />
+		</classes>
+	</test>
+</suite>

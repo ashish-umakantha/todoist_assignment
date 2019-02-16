@@ -32,7 +32,7 @@ public class Onboarding {
      *  @param driver      -  Driver object
      */
 	public Login navigateToLoginWithEmail(AppiumDriver<MobileElement> driver) throws Exception { 
-		LoggerUtils.info("Navigating to login screen");
+		LoggerUtils.info("Navigating to login screen on the app");
 		WaitHelperUtil.waitForElementPresence(driver, continueWithEmail);
 		continueWithEmail.click();
 		return new Login(driver);	

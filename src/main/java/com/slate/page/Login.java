@@ -40,7 +40,7 @@ public class Login {
      *  @param driver      -  Driver object
      */
 	public Homepage loginWithEmail(AppiumDriver<MobileElement> driver) throws Exception {
-		LoggerUtils.info("Entering credentials from config file");
+		LoggerUtils.info("Entering credentials after reading from config file");
 		WaitHelperUtil.waitForElementPresence(driver, emailField);
 		emailField.sendKeys(ConfigReader.getProperty("email"));
 		AppiumDriverUtility.hideKeyboard(driver);

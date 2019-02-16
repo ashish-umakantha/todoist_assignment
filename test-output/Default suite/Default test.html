@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 14 16:18:11 MYT 2019</td>
+<td>Started on:</td><td>Sat Feb 16 16:18:40 MYT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>47 seconds (47787 ms)</td>
+<tr><td>Total time:</td><td>98 seconds (98026 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,28 +76,43 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.slate.assignment.TodoistCases.createProjectCase()'><b>createProjectCase</b><br>Test class: com.slate.assignment.TodoistCases<br/>
-<a href="#Output-1801942731" onClick='toggleBox("Output-1801942731", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-409195262" onClick='toggleBox("Output-409195262", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1801942731" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1801942731">
-<div style="color:green">INFO: [02-14-2019 04:18:26 464] Generating random and unique project name</div><br/>
-<div style="color:green">INFO: [02-14-2019 04:18:27 698] {
-	"id": 2205532193,
-	"name": "Test project 307674",
-	"order": 7,
-	"indent": 1,
-	"comment_count": 0
-}
-</div><br/>
-<div style="color:green">INFO: [02-14-2019 04:18:27 702] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 307674","id":2205532193,"order":7}</div><br/>
-<div style="color:green">INFO: [02-14-2019 04:18:27 702] Navigating to login screen</div><br/>
-<div style="color:green">INFO: [02-14-2019 04:18:28 504] Entering credentials from config file</div><br/>
-<div style="color:green">INFO: [02-14-2019 04:18:51 253] Verifying project name in manage project tab</div><br/>
+<a href="#Output-409195262" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-409195262">
+<div style="color:green">INFO: [02-16-2019 04:18:55 387] Generating random and unique project name</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:18:55 387] Project name is Test project 633509</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:18:56 587] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 633509","id":2205654706,"order":1}</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:18:56 588] Project id from the response is 2205654706</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:18:56 588] Navigating to login screen on the app</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:18:58 177] Entering credentials after reading from config file</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:19:18 781] Verifying project name in manage project tab</div><br/>
 </div>
 </td>
 <td></td>
-<td>32</td>
-<td>com.slate.assignment.TodoistCases@6e0e048a</td></tr>
+<td>25</td>
+<td>com.slate.assignment.TodoistCases@5bc79255</td></tr>
+<tr>
+<td title='com.slate.assignment.TodoistCases.createTaskCase()'><b>createTaskCase</b><br>Test class: com.slate.assignment.TodoistCases<br/>
+<a href="#Output-1450500594" onClick='toggleBox("Output-1450500594", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1450500594" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1450500594">
+<div style="color:green">INFO: [02-16-2019 04:19:35 545] Generating random and unique project name</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:19:35 546] Project name is Test project 108885</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:19:36 452] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 108885","id":2205654735,"order":2}</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:19:36 452] Project id from the response is 2205654735</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:19:36 453] Navigating to login screen on the app</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:19:37 031] Entering credentials after reading from config file</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:20:00 532] Creating uniquie and random task Test task 409901 for the project Test project 108885</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:20:14 937] Veryfying if task is successfully created on the app</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:20:16 405] Verifying task name from getTasks api response</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:20:17 398] Response from get Task name api is: [{"comment_count":0,"project_id":2205654735,"indent":1,"label_ids":[],"id":3055790643,"completed":false,"priority":1,"content":"Test task 409901","url":"https:\/\/todoist.com\/showTask?id=3055790643","order":1}]</div><br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>com.slate.assignment.TodoistCases@5bc79255</td></tr>
 </table><p>
 </body>
 </html>

@@ -5,9 +5,10 @@
     <classes>
       <class name="com.slate.assignment.TodoistCases">
         <methods>
+          <include name="createTaskCase"/>
           <include name="resetApp"/>
-          <include name="createProjectCase"/>
           <include name="beforeMethod"/>
+          <include name="clearTestData"/>
           <include name="before"/>
         </methods>
       </class> <!-- com.slate.assignment.TodoistCases -->

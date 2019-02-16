@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>TestNG:  Android native app test on Android 7</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Android native app test on Android 7</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Feb 16 16:23:13 MYT 2019</td>
+</tr>
+<tr><td>Total time:</td><td>95 seconds (95963 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.slate.assignment.TodoistCases.createProjectCase()'><b>createProjectCase</b><br>Test class: com.slate.assignment.TodoistCases<br/>
+<a href="#Output-1771421544" onClick='toggleBox("Output-1771421544", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1771421544" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1771421544">
+<div style="color:green">INFO: [02-16-2019 04:23:28 287] Generating random and unique project name</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:23:28 288] Project name is Test project 117041</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:23:29 467] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 117041","id":2205654924,"order":1}</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:23:29 467] Project id from the response is 2205654924</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:23:29 468] Navigating to login screen on the app</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:23:30 661] Entering credentials after reading from config file</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:23:50 735] Verifying project name in manage project tab</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:23:52 574] Test Method resides in com.slate.assignment.TodoistCases</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:23:52 575] Test Status: Pass</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:23:52 576] Test case :createProjectCase got passed</div><br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>com.slate.assignment.TodoistCases@4b44655e</td></tr>
+<tr>
+<td title='com.slate.assignment.TodoistCases.createTaskCase()'><b>createTaskCase</b><br>Test class: com.slate.assignment.TodoistCases<br/>
+<a href="#Output-406749219" onClick='toggleBox("Output-406749219", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-406749219" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-406749219">
+<div style="color:green">INFO: [02-16-2019 04:24:07 114] Generating random and unique project name</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:07 115] Project name is Test project 95940</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:08 002] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 95940","id":2205654961,"order":2}</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:08 002] Project id from the response is 2205654961</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:08 002] Navigating to login screen on the app</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:08 592] Entering credentials after reading from config file</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:32 633] Creating uniquie and random task Test task 891169 for the project Test project 95940</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:46 473] Veryfying if task is successfully created on the app</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:47 953] Verifying task name from getTasks api response</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:48 864] Response from get Task name api is: [{"comment_count":0,"project_id":2205654961,"indent":1,"label_ids":[],"id":3055793912,"completed":false,"priority":1,"content":"Test task 891169","url":"https:\/\/todoist.com\/showTask?id=3055793912","order":1}]</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:48 866] Test Method resides in com.slate.assignment.TodoistCases</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:48 866] Test Status: Pass</div><br/>
+<div style="color:green">INFO: [02-16-2019 04:24:48 866] Test case :createTaskCase got passed</div><br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>com.slate.assignment.TodoistCases@4b44655e</td></tr>
+</table><p>
+</body>
+</html>

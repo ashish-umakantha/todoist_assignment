@@ -1,13 +1,20 @@
 package com.slate.base;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
+import com.slate.apiTasks.ApiTasks;
 import com.slate.dataaccess.ConfigReader;
 import com.slate.page.Onboarding;
 import com.slate.utils.LoggerUtils;
@@ -80,6 +87,12 @@ public class InitDriver {
 			driver.quit();
 	    }
 	}
+	
+	@AfterSuite
+	public void clearTestData() throws Exception{
+		LoggerUtils.info("Deleting the test data via delete api ");
+		ApiTasks.deleteAllProjects();
+	}
 		
 	@BeforeMethod(alwaysRun=true)  
 	public void beforeMethod() throws Exception {
@@ -91,7 +104,7 @@ public class InitDriver {
      */
 	public void setup() throws Exception {
 		new ConfigReader();
-		LoggerUtils.info("Thread: " + Thread.currentThread().getName() + " :: " + "Testing in Device: " + ConfigReader.getProperty("deviceName"));
+		LoggerUtils.info("Testing on Device: " + ConfigReader.getProperty("deviceName"));
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformVersion", ConfigReader.getProperty("platformVersion")); 
         capabilities.setCapability("deviceName", ConfigReader.getProperty("deviceName"));
