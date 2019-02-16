@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -107,6 +107,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Assignment_Suite" title="com.slate.assignment.TodoistCases" hash-for-method="createTaskCase">createTaskCase</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Assignment_Suite" title="com.slate.assignment.TodoistCases" hash-for-method="reopenTask">reopenTask</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Assignment_Suite -->
@@ -139,6 +144,13 @@
                   <a name="createTaskCase">
                   </a> <!-- createTaskCase -->
                   <span class="method-name">createTaskCase</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="reopenTask">
+                  </a> <!-- reopenTask -->
+                  <span class="method-name">reopenTask</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,20 +210,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createTaskCase')
+data.setCell(0, 1, 'reopenTask')
 data.setCell(0, 2, 'com.slate.assignment.TodoistCases')
-data.setCell(0, 3, 41753);
+data.setCell(0, 3, 51157);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createProjectCase')
+data.setCell(1, 1, 'createTaskCase')
 data.setCell(1, 2, 'com.slate.assignment.TodoistCases')
-data.setCell(1, 3, 24297);
+data.setCell(1, 3, 42868);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'createProjectCase')
+data.setCell(2, 2, 'com.slate.assignment.TodoistCases')
+data.setCell(2, 3, 27731);
 window.suiteTableData['Assignment_Suite']= { tableData: data, tableDiv: 'times-div-Assignment_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Assignment_Suite">
               </div> <!-- times-div-Assignment_Suite -->
             </div> <!-- times-div -->
@@ -225,34 +241,58 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">createProjectCase</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:23:28 287] Generating random and unique project name</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:23:28 288] Project name is Test project 117041</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:23:29 467] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 117041","id":2205654924,"order":1}</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:23:29 467] Project id from the response is 2205654924</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:23:29 468] Navigating to login screen on the app</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:23:30 661] Entering credentials after reading from config file</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:23:50 735] Verifying project name in manage project tab</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:23:52 574] Test Method resides in com.slate.assignment.TodoistCases</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:23:52 575] Test Status: Pass</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:23:52 576] Test case :createProjectCase got passed</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:07 379] Generating random and unique project name</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:07 380] Project name is Test project 731502</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:08 541] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 731502","id":2205680407,"order":7}</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:08 541] Project id from the response is 2205680407</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:08 541] Navigating to login screen on the app</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:09 527] Entering credentials after reading from config file</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:30 498] Verifying project name in manage project tab</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:35 106] Test Method resides in com.slate.assignment.TodoistCases</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:35 106] Test Status: Pass</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:35 108] Test case :createProjectCase got passed</div></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">createTaskCase</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:07 114] Generating random and unique project name</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:07 115] Project name is Test project 95940</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:08 002] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 95940","id":2205654961,"order":2}</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:08 002] Project id from the response is 2205654961</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:08 002] Navigating to login screen on the app</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:08 592] Entering credentials after reading from config file</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:32 633] Creating uniquie and random task Test task 891169 for the project Test project 95940</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:46 473] Veryfying if task is successfully created on the app</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:47 953] Verifying task name from getTasks api response</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:48 864] Response from get Task name api is: [{"comment_count":0,"project_id":2205654961,"indent":1,"label_ids":[],"id":3055793912,"completed":false,"priority":1,"content":"Test task 891169","url":"https:\/\/todoist.com\/showTask?id=3055793912","order":1}]</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:48 866] Test Method resides in com.slate.assignment.TodoistCases</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:48 866] Test Status: Pass</div></span>
-                <span class="reporter-method-output"><div style="color:green">INFO: [02-16-2019 04:24:48 866] Test case :createTaskCase got passed</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:50 039] Generating random and unique project name</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:50 040] Project name is Test project 864999</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:50 946] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 864999","id":2205680459,"order":8}</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:50 947] Project id from the response is 2205680459</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:50 947] Navigating to login screen on the app</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:48:51 402] Entering credentials after reading from config file</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:16 115] Creating uniquie and random task Test task 696841 for the project Test project 864999</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:30 450] Veryfying if task is successfully created on the app</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:31 913] Verifying task name from getTasks api response</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:32 905] Response from get Task name api is: [{"comment_count":0,"project_id":2205678770,"indent":1,"label_ids":[],"id":3056184927,"completed":false,"priority":1,"content":"Test task 831973","url":"https:\/\/todoist.com\/showTask?id=3056184927","order":1},{"comment_count":0,"project_id":2205679055,"indent":1,"label_ids":[],"id":3056191135,"completed":false,"priority":1,"content":"Test task 368276","url":"https:\/\/todoist.com\/showTask?id=3056191135","order":1},{"comment_count":0,"project_id":2205679225,"indent":1,"label_ids":[],"id":3056194612,"completed":false,"priority":1,"content":"Test task 462623","url":"https:\/\/todoist.com\/showTask?id=3056194612","order":1},{"comment_count":0,"project_id":2205679604,"indent":1,"label_ids":[],"id":3056200807,"completed":false,"priority":1,"content":"Test task 183422","url":"https:\/\/todoist.com\/showTask?id=3056200807","order":1},{"comment_count":0,"project_id":2205680093,"indent":1,"label_ids":[],"id":3056208432,"completed":false,"priority":1,"content":"Test task 436097","url":"https:\/\/todoist.com\/showTask?id=3056208432","order":1},{"comment_count":0,"project_id":2205680459,"indent":1,"label_ids":[],"id":3056214137,"completed":false,"priority":1,"content":"Test task 696841","url":"https:\/\/todoist.com\/showTask?id=3056214137","order":1}]</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:32 907] Test Method resides in com.slate.assignment.TodoistCases</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:32 908] Test Status: Pass</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:32 908] Test case :createTaskCase got passed</div></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">reopenTask</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:47 459] Generating random and unique project name</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:47 459] Project name is Test project 568955</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:48 321] Response from create project api is: {"comment_count":0,"indent":1,"name":"Test project 568955","id":2205680506,"order":9}</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:48 321] Project id from the response is 2205680506</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:48 321] Navigating to login screen on the app</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:49:49 023] Entering credentials after reading from config file</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:13 533] Creating uniquie and random task Test task 718282 for the project Test project 568955</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:27 334] Veryfying if task is successfully created on the app</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:28 846] Calling get Task name api to fetch task id</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:29 731] Task id for task Test task 718282 is 3056215108</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:29 901] Completeing task from app</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:30 777] Verifying if completed task msg is seen</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:31 755] Verifying the task disappears</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:33 500] Reopening the task via API</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:35 078] Pulling to refresh</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:35 548] Verifying if task name reappears</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:38 615] Test Method resides in com.slate.assignment.TodoistCases</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:38 615] Test Status: Pass</div></span>
+                <span class="reporter-method-output"><div style="color:green">INFO: [02-17-2019 12:50:38 615] Test case :reopenTask got passed</div></span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -281,27 +321,39 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createProjectCase</span>
-                <span class="method-start">14694 ms</span>
+                <span class="method-start">15767 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">resetApp(public void com.slate.assignment.TodoistCases.createProjectCase() throws java.lang.Exception)</span>
-                <span class="method-start">38997 ms</span>
+                <span class="method-start">43504 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">39752 ms</span>
+                <span class="method-start">44284 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createTaskCase</span>
-                <span class="method-start">53533 ms</span>
+                <span class="method-start">58433 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">resetApp(public void com.slate.assignment.TodoistCases.createTaskCase() throws java.lang.Exception)</span>
-                <span class="method-start">95287 ms</span>
+                <span class="method-start">101305 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">102032 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">reopenTask</span>
+                <span class="method-start">115853 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">resetApp(public void com.slate.assignment.TodoistCases.reopenTask() throws java.lang.Exception)</span>
+                <span class="method-start">167011 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">clearTestData</span>
-                <span class="method-start">100989 ms</span>
+                <span class="method-start">172656 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

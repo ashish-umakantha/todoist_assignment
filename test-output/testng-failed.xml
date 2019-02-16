@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Assignment Suite]">
-  <listeners>
-    <listener class-name="com.slate.listeners.ExtentReportListener"/>
-  </listeners>
-  <test name="Android native app test on Android 7(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
       <class name="com.slate.assignment.TodoistCases">
         <methods>
+          <include name="reopenTask"/>
           <include name="resetApp"/>
-          <include name="test"/>
           <include name="beforeMethod"/>
-          <include name="clearTestData"/>
           <include name="before"/>
         </methods>
       </class> <!-- com.slate.assignment.TodoistCases -->
     </classes>
-  </test> <!-- Android native app test on Android 7(failed) -->
-</suite> <!-- Failed suite [Assignment Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

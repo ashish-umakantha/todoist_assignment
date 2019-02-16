@@ -42,10 +42,9 @@ public class ApiUtil {
             for(Map.Entry<String, String> entry : headerMap.entrySet()) {
                 postRequest.addHeader(entry.getKey(), entry.getValue());
             }
-            
-            StringEntity entity = new StringEntity(payload,ContentType.APPLICATION_JSON);
-            postRequest.setEntity(entity);
-            
+            	StringEntity entity = new StringEntity(payload,ContentType.APPLICATION_JSON);
+                postRequest.setEntity(entity);
+
             //Send the request; It will immediately return the response in HttpResponse object if any
             CloseableHttpResponse response = httpclient.execute(postRequest);
             //verify the valid error code first
@@ -54,8 +53,8 @@ public class ApiUtil {
             {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
             }
-            String responseString = EntityUtils.toString(response.getEntity(), "UTF-8");
-            return responseString;
+            return EntityUtils.toString(response.getEntity(), "UTF-8");
+           
         }
         finally
         {
@@ -89,8 +88,7 @@ public class ApiUtil {
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
             }
-            String responseString = EntityUtils.toString(response.getEntity(), "UTF-8");
-            return responseString;
+            return EntityUtils.toString(response.getEntity(), "UTF-8");
         }
         finally
         {

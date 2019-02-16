@@ -18,6 +18,7 @@ import com.slate.utils.LoggerUtils;
 import com.slate.utils.WaitHelperUtil;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
@@ -40,6 +41,21 @@ public class ProjectDetail {
 	
 	@AndroidFindBy(id="com.todoist:id/text")
     private MobileElement taskName;
+	
+	@AndroidFindBy(id="com.todoist:id/item")
+    private MobileElement taskItem;
+	
+	@AndroidFindBy(id="com.todoist:id/menu_item_complete")
+    private MobileElement completeTask;
+	
+	@AndroidFindBy(xpath = "//*[@resource-id='com.todoist:id/snackbar_text'][@text='Completed.']")
+	private MobileElement completedText;
+	
+	@AndroidFindBy(id="com.todoist:id/empty_icon")
+    private MobileElement emptyFrame;
+	
+	@AndroidFindBy(id="com.todoist:id/fab")
+    private MobileElement addButton;
 	
 	/**
      * Constructor to initialize elements
@@ -132,5 +148,55 @@ public class ProjectDetail {
 		}
 		return false;
 	}
+	
+	/**
+     * This Method is to complete task
+     * @param driver      -  Driver object
+     */
+	public void completeTask(AppiumDriver<MobileElement> driver) {
+		taskItem.click();
+		LoggerUtils.info("Completeing task from app");
+		completeTask.click();
+		LoggerUtils.info("Verifying if completed task msg is seen");
+		Assert.assertTrue(WaitHelperUtil.isElementDisplayed(driver, completedText), "Completed msg not seen");
+		LoggerUtils.info("Verifying the task disappears");
+		Assert.assertFalse(WaitHelperUtil.isElementDisplayed(driver, taskItem), "Task item still visible");
+	}
+	
+	/**
+     * This Method is to fetch task id from get task API
+     */
+	public String fetchTaskId() throws Exception, IOException, ParseException {
+		LoggerUtils.info("Calling get Task name api to fetch task id");
+		String response = ApiTasks.getTasksApi();
+		JSONParser parser = new JSONParser();
+		JSONObject js = new JSONObject();
+		Object obj = parser.parse(response);
+		JSONArray jsons = (JSONArray) obj; 
+		for(int i=0;i<jsons.size();i++) { //traverse through all the task names from response
+			js = (JSONObject) jsons.get(i);	
+			//Logic to fetch correct task id
+			if (js.get("content").equals(ApiTasks.task_name)) {
+				LoggerUtils.info("Task id for task " + ApiTasks.task_name + " is " + js.get("id").toString());
+				return js.get("id").toString();
+			}
+		}
+		fail("No task id found for task name " + ApiTasks.task_name);
+		return null;
+	}
 
+	/**
+     * This Method is to check If task is re-opened
+     * @param driver      -  Driver object
+	 * @throws InterruptedException 
+     */
+	public void checkIfTaskReopened(AppiumDriver<MobileElement> driver) throws InterruptedException {
+		TouchAction touchAction = new TouchAction(driver);
+		LoggerUtils.info("Pulling to refresh");
+		touchAction.press(emptyFrame).moveTo(addButton).release().perform(); // Doing pull to refresh
+		LoggerUtils.info("Verifying if task name reappears");
+		WaitHelperUtil.waitfor(3);
+		Assert.assertEquals(taskName.getText(), ApiTasks.task_name, "Task name not reopened");
+	}
+	
 }

@@ -39,4 +39,20 @@ public class TodoistCases extends InitDriver {
 		Assert.assertTrue(project.verifyTaskName());
 	}
 	
+	/**
+     * Test case to complete task on mobile and reopening via API and checking in mobile if re-opened correctly.
+     */
+	@Test(priority=3)
+	  public void reopenTask() throws Exception {
+		AppiumDriver<MobileElement> driver = getDriver();
+		ApiTasks.createProjectViaApi(); //Creation of unique and random test project (Serves as test Data)
+		Login login = onboarding.navigateToLoginWithEmail(driver);
+		Homepage home = login.loginWithEmail(driver);
+		ProjectDetail project = home.navigateToProjectTab(driver);
+		project.createTask(driver);
+		String taskId = project.fetchTaskId();
+		project.completeTask(driver);
+		ApiTasks.reopenTask(taskId);
+		project.checkIfTaskReopened(driver);
+	}
 }

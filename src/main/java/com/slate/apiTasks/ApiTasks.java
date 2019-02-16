@@ -13,6 +13,8 @@ import com.google.gson.Gson;
 import com.slate.dataaccess.ConfigReader;
 import com.slate.utils.ApiUtil;
 import com.slate.utils.LoggerUtils;
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
 
 public class ApiTasks {
 	
@@ -44,16 +46,7 @@ public class ApiTasks {
 	}
 	
 	/**
-     * This Method is used to generate random number so that we generate unique project / task name
-     */
-	public static String generateRandomNumber() {
-		Random rand = new Random();
-		int  n = rand.nextInt(1000000);
-		return Integer.toString(n);
-	}
-	
-	/**
-     * This Method is used to get all active tasks using getTasks api.
+     * This Method is used to get all active tasks using get active task API.
      * Note: It returns json array.
      */
 	public static String getTasksApi() throws URISyntaxException, IOException, ParseException {
@@ -66,7 +59,7 @@ public class ApiTasks {
 	}
 	
 	/**
-     * This Method is used to get list of all projects from the account.
+     * This Method is used to get list of all projects from the account via API.
      * Note: It returns json array.
      */
 	public static String getProject() throws URISyntaxException, IOException, ParseException {
@@ -79,8 +72,21 @@ public class ApiTasks {
 	}
 	
 	/**
-     * This Method is used to delete all the project which was created during test.
-     * Note: This helps us to clean up test data during after completion of test suite.
+     * This Method is used to reopen Task via API.
+     * @param taskId - Task id for reopening
+     * NOTE: I have used Rest Assured library to demonstrate the use of different library
+     */
+	public static void reopenTask(String taskId) throws Exception, IOException {
+		LoggerUtils.info("Reopening the task via API");
+		RestAssured.baseURI = ConfigReader.getProperty("todoistApi") + "API/v8/tasks/" + taskId + "/reopen";
+        RequestSpecification request = RestAssured.given();
+        request.header("Authorization", ConfigReader.getProperty("userAuth"));
+        request.post();	
+	}
+	
+	/**
+     * This Method is used to delete all the project which was created during test via API.
+     * 
      */
 	public static void deleteAllProjects() throws ParseException, URISyntaxException, IOException {
 		HashMap<String,String> hm=new HashMap<String, String>();
@@ -96,6 +102,15 @@ public class ApiTasks {
 		}
 	}
 	
+	/**
+     * This Method is used to generate random number so that we generate unique project / task name
+     */
+	public static String generateRandomNumber() {
+		Random rand = new Random();
+		int  n = rand.nextInt(1000000);
+		return Integer.toString(n);
+	}
+		
 	public static String jSONString(Map<String, Object> requestParams) {
         return new Gson().toJson(requestParams);
     }
